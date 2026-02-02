@@ -1,0 +1,196 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url(Fundo-Sobre-Mim.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #f4f6fb;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center; /* centraliza a nav */
+}
+
+.Navegação {
+    width: 90%;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f4f6fb;
+    font-size: 18px;
+    position: relative;
+}
+
+/* underline vermelho */
+nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #f70e0e;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* MAIN */
+
+main {
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+    padding-top: 40px; /* controla a altura */
+    
+}
+
+
+main.conteudo {
+    min-height: 100vh;
+    padding-top: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CONTAINER */
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 140px; /* distância entre foto e texto */
+    max-width: 1500px;
+    width: 100%;
+    padding: 0 8%;
+    margin-top: -60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FOTO */
+.Minha-foto img {
+    width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    animation: float 6s ease-in-out infinite;
+    will-change: transform;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* TEXTO */
+.Texto {
+    max-width: 600px;
+}
+
+.Texto h2 {
+    font-size: 75px;
+    margin-bottom: 20px;
+    color: #f70e0e;
+}
+
+.Texto p {
+    font-size: 28px;
+    width: 800px;
+    line-height: 1.6;
+    color: #cfcfcf;
+}
+
+/* Moile */
+@media (max-width: 768px) {
+    .conteudo {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 10px;
+        gap: 20px;
+    }
+    .Minha-foto img {
+        width: 200px;
+        margin-top: 50px;
+    }
+    .Texto h2 {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .Texto p {
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1030px) {
+    .conteudo {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 10px;
+        gap: 40px;
+    }
+    .Minha-foto img {
+        width: 300px;
+        margin-top: 50px;
+    }
+    .Texto h2 {
+        font-size: 55px;
+        margin-bottom: 20px;
+    }
+    .Texto p {
+        font-size: 20px;
+        width: 100%;
+    }
+}
+
+/* Ajuste de fundo para telas menores */
+@media (max-width: 730px) {
+    .conteudo {
+        padding: 0 5px;
+        gap: 10px;
+    }
+    .Minha-foto img {
+        width: 150px;
+        margin-top: 30px;
+    }
+    .Texto h2 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .Texto p {
+        font-size: 14px;
+    }
+}

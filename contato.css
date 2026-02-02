@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    background-image: url(Fundo-Contato.png);
+    min-height: 100vh;
+    font-family: Arial, sans-serif; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f4f6fb;
+}
+
+/* HEADER (igual às outras páginas) */
+header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+}
+
+.Navegação {
+    width: 90%;
+    max-width: 1300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f4f6fb;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #f70e0e;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.contato {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-contato {
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(6px);
+    padding: 60px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    
+}
+
+
+
+.card-contato h2 {
+    color: #f70e0e;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.card-contato p {
+    font-size: 20px;
+    color: #cfcfcf;
+    margin-bottom: 40px;
+}
+
+.links-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    color: #f4f6fb;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.link svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.link:hover {
+    transform: scale(1.08);
+    border-color: #f70e0e;
+    color: #f70e0e;
+}
+
+.link:hover svg {
+    fill: #f70e0e;
+}
+
+.link,
+.link:visited,
+.link:hover,
+.link:active {
+    color: #f4f6fb;
+}
+
+
+.icon:hover {
+    border: 2px solid #f70e0e;
+}
+
+.icon:hover .icon-svg {
+    transform: scale(1.15);
+    fill: #f70e0e;
+}
+
+@media (max-width: 600px) {
+.card-contato {
+    padding: 30px 20px;
+}
+    .card-contato h2 {
+            font-size: 34px;
+        }
+    .link {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
