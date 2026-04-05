@@ -103,16 +103,35 @@ main {
     }
 }
 
-/* TEXTO */
-.card h2 {
-    font-size: 54px;
+.card img {
+    width: 78px;
+}
+.card h3 {
+    font-size: 46px;
     color: #f70e0e;
     margin-bottom: 20px;
 }
 .card p {
-    font-size: 35px;
+    font-size: 22px;
     line-height: 1.6;
     color: #cfcfcf;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 40px;
+    background: #f70e0e;
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 30px;
+    transition: background 0.3s;
+}
+
+.card a:hover {
+    background-color: #000000;
+    color: #f70e0e;
 }
 
 /* DETALHE VISUAL */
@@ -124,6 +143,29 @@ main {
     color: #999;
     text-transform: uppercase;
 }
+
+.projeto-card {
+background: #fff;
+border-radius: 10px;
+padding: 15px;
+width: 300px;
+transition: 0.3s;
+}
+
+.projeto-card img {
+width: 100%;
+border-radius: 8px;
+}
+
+.projeto-card:hover {
+transform: translateY(-5px);
+}
+
+.links {
+margin-top: 10px;
+}
+
+
 
 @media (max-width: 768px) {
     .card {
